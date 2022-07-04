@@ -1,5 +1,5 @@
 <template>
-    <default-field :field="field" full-width-content>
+    <DefaultField :field="field" full-width-content>
         <template #field>
             <div
                 :style="{columnCount: this.field.columns}"
@@ -28,7 +28,7 @@
                 {{ firstError }}
             </p>
         </template>
-    </default-field>
+    </DefaultField>
 </template>
 
 <script>
