@@ -1,5 +1,9 @@
 # Laravel Nova Checkboxes Field
 
+## Update 
+Since this package is not actively worked on i decided to use pull request from ```boxraiser:nova-4```.
+
+
 ![Checkboxes in Laravel Nova](formPreview.png)
 
 ![Checkboxes in Laravel Nova](detailPreview.png)

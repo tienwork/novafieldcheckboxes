@@ -1,6 +1,6 @@
 <template>
     <default-field :field="field" full-width-content>
-        <template slot="field">
+        <template #field>
             <div
                 :style="{columnCount: this.field.columns}"
                 class="w-full max-col-2"
@@ -33,41 +33,32 @@
 
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
-
 export default {
     mixins: [FormField, HandlesValidationErrors],
-
     props: ['resourceName', 'resourceId', 'field'],
-
     methods: {
         isChecked(option) {
             return this.value ? this.value.includes(option) : false
         },
-
         toggleOption(option) {
             if (this.isChecked(option)) {
                 this.$set(this, 'value', this.value.filter(item => item != option))
-
                 return
             }
-
             this.value.push(option)
         },
-
         /*
          * Set the initial, internal value for the field.
          */
         setInitialValue() {
           this.value = this.field.value || []
         },
-
         /**
          * Fill the given FormData object with the field's internal value.
          */
         fill(formData) {
           formData.append(this.field.attribute, this.value || [])
         },
-
         /**
          * Update the field's internal value.
          */
