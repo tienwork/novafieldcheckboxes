@@ -14,7 +14,6 @@
                         class="inline-block rounded-full w-2 h-2 mr-1"
                         :style="optionStyle(option)"
                     />
-                    <span>{{ label }}</span>
                 </div>
             </span>
         </p>
