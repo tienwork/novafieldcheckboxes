@@ -1,7 +1,7 @@
 <template>
     <PanelItem :field="field">
         <template #value>
-            <p slot="value" class="text-90 flex">
+            <p class="text-90 flex">
                 <span
                     :style="{columnCount: this.field.columns}"
                     class="w-full max-col-2"
