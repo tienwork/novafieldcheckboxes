@@ -1,23 +1,25 @@
 <template>
     <PanelItem :field="field">
-        <p slot="value" class="text-90 flex">
-            <span
-                :style="{columnCount: this.field.columns}"
-                class="w-full max-col-2"
-            >
-                <div
-                    v-for="(label, option) in field.options"
-                    :key="option"
-                    class="flex-auto"
+        <template #value>
+            <p slot="value" class="text-90 flex">
+                <span
+                    :style="{columnCount: this.field.columns}"
+                    class="w-full max-col-2"
                 >
-                    <span
-                        class="inline-block rounded-full w-2 h-2 mr-1"
-                        :style="optionStyle(option)"
-                    />
-                    <span>{{ label }}</span>
-                </div>
-            </span>
-        </p>
+                    <div
+                        v-for="(label, option) in field.options"
+                        :key="option"
+                        class="flex-auto"
+                    >
+                        <span
+                            class="inline-block rounded-full w-2 h-2 mr-1"
+                            :style="optionStyle(option)"
+                        />
+                        <span>{{ label }}</span>
+                    </div>
+                </span>
+            </p>
+        </template>
     </PanelItem>
 </template>
 
