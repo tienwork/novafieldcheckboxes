@@ -42,7 +42,7 @@ export default {
         },
         toggleOption(option) {
             if (this.isChecked(option)) {
-                this.$set(this, 'value', this.value.filter(item => item != option))
+                this.value.filter(item => item != option);
                 return
             }
             this.value.push(option)
